@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C5469B20D7C5E0000CF4417 /* FFTOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C5469B10D7C5E0000CF4417 /* FFTOutput.cpp */; };
+		3C79D8240D76E7FF006A0B8D /* Cartesian.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D7F50D76E7FF006A0B8D /* Cartesian.cpp */; };
+		3C79D8250D76E7FF006A0B8D /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D7F70D76E7FF006A0B8D /* Client.cpp */; };
+		3C79D8260D76E7FF006A0B8D /* ClientGUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D7F90D76E7FF006A0B8D /* ClientGUI.cpp */; };
+		3C79D8270D76E7FF006A0B8D /* DAQPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D7FB0D76E7FF006A0B8D /* DAQPipe.cpp */; };
+		3C79D8280D76E7FF006A0B8D /* FFTChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D7FE0D76E7FF006A0B8D /* FFTChannel.cpp */; };
+		3C79D8290D76E7FF006A0B8D /* LANLOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8000D76E7FF006A0B8D /* LANLOutput.cpp */; };
+		3C79D82A0D76E7FF006A0B8D /* LJHOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8020D76E7FF006A0B8D /* LJHOutput.cpp */; };
+		3C79D82C0D76E7FF006A0B8D /* plotWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8060D76E7FF006A0B8D /* plotWindow.cpp */; };
+		3C79D82D0D76E7FF006A0B8D /* PLSOutput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8080D76E7FF006A0B8D /* PLSOutput.cpp */; };
+		3C79D82E0D76E7FF006A0B8D /* PRDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D80A0D76E7FF006A0B8D /* PRDisplay.cpp */; };
+		3C79D82F0D76E7FF006A0B8D /* PulseAnalysisDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D80C0D76E7FF006A0B8D /* PulseAnalysisDisplay.cpp */; };
+		3C79D8310D76E7FF006A0B8D /* StreamChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8120D76E7FF006A0B8D /* StreamChannel.cpp */; };
+		3C79D8320D76E7FF006A0B8D /* xcaldaq_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8170D76E7FF006A0B8D /* xcaldaq_client.cpp */; };
+		3C79D8330D76E7FF006A0B8D /* XCALDAQServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D81D0D76E7FF006A0B8D /* XCALDAQServer.cpp */; };
+		3C79D8340D76E7FF006A0B8D /* XOUT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8200D76E7FF006A0B8D /* XOUT.cpp */; };
+		3C79D8350D76E7FF006A0B8D /* XPulseRec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D8220D76E7FF006A0B8D /* XPulseRec.cpp */; };
+		3C79D83A0D76F32E006A0B8D /* libfltk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C79D8390D76F32E006A0B8D /* libfltk.a */; };
+		3C79D84C0D76F39D006A0B8D /* uici.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D84A0D76F39D006A0B8D /* uici.c */; };
+		3C79D84D0D76F39D006A0B8D /* uiciname.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C79D84B0D76F39D006A0B8D /* uiciname.c */; };
+		3C79D88B0D76F65A006A0B8D /* libfftw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C79D88A0D76F65A006A0B8D /* libfftw3.a */; };
+		3C79D8900D76F70A006A0B8D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C79D88E0D76F70A006A0B8D /* Carbon.framework */; };
+		3C79D8910D76F70A006A0B8D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C79D88F0D76F70A006A0B8D /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C5469B00D7C5E0000CF4417 /* FFTOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTOutput.h; sourceTree = "<group>"; };
+		3C5469B10D7C5E0000CF4417 /* FFTOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTOutput.cpp; sourceTree = "<group>"; };
+		3C79D7F40D76E7FF006A0B8D /* byteorder64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byteorder64.h; sourceTree = "<group>"; };
+		3C79D7F50D76E7FF006A0B8D /* Cartesian.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cartesian.cpp; sourceTree = "<group>"; };
+		3C79D7F60D76E7FF006A0B8D /* Cartesian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cartesian.h; sourceTree = "<group>"; };
+		3C79D7F70D76E7FF006A0B8D /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Client.cpp; sourceTree = "<group>"; };
+		3C79D7F80D76E7FF006A0B8D /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		3C79D7F90D76E7FF006A0B8D /* ClientGUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClientGUI.cpp; sourceTree = "<group>"; };
+		3C79D7FA0D76E7FF006A0B8D /* ClientGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientGUI.h; sourceTree = "<group>"; };
+		3C79D7FB0D76E7FF006A0B8D /* DAQPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DAQPipe.cpp; sourceTree = "<group>"; };
+		3C79D7FC0D76E7FF006A0B8D /* DAQPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAQPipe.h; sourceTree = "<group>"; };
+		3C79D7FD0D76E7FF006A0B8D /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
+		3C79D7FE0D76E7FF006A0B8D /* FFTChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTChannel.cpp; sourceTree = "<group>"; };
+		3C79D7FF0D76E7FF006A0B8D /* FFTChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTChannel.h; sourceTree = "<group>"; };
+		3C79D8000D76E7FF006A0B8D /* LANLOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LANLOutput.cpp; sourceTree = "<group>"; };
+		3C79D8010D76E7FF006A0B8D /* LANLOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANLOutput.h; sourceTree = "<group>"; };
+		3C79D8020D76E7FF006A0B8D /* LJHOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LJHOutput.cpp; sourceTree = "<group>"; };
+		3C79D8030D76E7FF006A0B8D /* LJHOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHOutput.h; sourceTree = "<group>"; };
+		3C79D8060D76E7FF006A0B8D /* plotWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = plotWindow.cpp; sourceTree = "<group>"; };
+		3C79D8070D76E7FF006A0B8D /* plotWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plotWindow.h; sourceTree = "<group>"; };
+		3C79D8080D76E7FF006A0B8D /* PLSOutput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PLSOutput.cpp; sourceTree = "<group>"; };
+		3C79D8090D76E7FF006A0B8D /* PLSOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSOutput.h; sourceTree = "<group>"; };
+		3C79D80A0D76E7FF006A0B8D /* PRDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PRDisplay.cpp; sourceTree = "<group>"; };
+		3C79D80B0D76E7FF006A0B8D /* PRDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRDisplay.h; sourceTree = "<group>"; };
+		3C79D80C0D76E7FF006A0B8D /* PulseAnalysisDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseAnalysisDisplay.cpp; sourceTree = "<group>"; };
+		3C79D80D0D76E7FF006A0B8D /* PulseAnalysisDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseAnalysisDisplay.h; sourceTree = "<group>"; };
+		3C79D8110D76E7FF006A0B8D /* SliderInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderInput.h; sourceTree = "<group>"; };
+		3C79D8120D76E7FF006A0B8D /* StreamChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StreamChannel.cpp; sourceTree = "<group>"; };
+		3C79D8130D76E7FF006A0B8D /* StreamChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamChannel.h; sourceTree = "<group>"; };
+		3C79D8140D76E7FF006A0B8D /* uici.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uici.h; sourceTree = "<group>"; };
+		3C79D8150D76E7FF006A0B8D /* uiciname.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiciname.h; sourceTree = "<group>"; };
+		3C79D8160D76E7FF006A0B8D /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		3C79D8170D76E7FF006A0B8D /* xcaldaq_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xcaldaq_client.cpp; sourceTree = "<group>"; };
+		3C79D8180D76E7FF006A0B8D /* xcaldaq_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xcaldaq_client.h; sourceTree = "<group>"; };
+		3C79D81B0D76E7FF006A0B8D /* XCALDAQLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCALDAQLock.h; sourceTree = "<group>"; };
+		3C79D81D0D76E7FF006A0B8D /* XCALDAQServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XCALDAQServer.cpp; sourceTree = "<group>"; };
+		3C79D81E0D76E7FF006A0B8D /* XCALDAQServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCALDAQServer.h; sourceTree = "<group>"; };
+		3C79D8200D76E7FF006A0B8D /* XOUT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XOUT.cpp; sourceTree = "<group>"; };
+		3C79D8210D76E7FF006A0B8D /* XOUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOUT.h; sourceTree = "<group>"; };
+		3C79D8220D76E7FF006A0B8D /* XPulseRec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XPulseRec.cpp; sourceTree = "<group>"; };
+		3C79D8230D76E7FF006A0B8D /* XPulseRec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPulseRec.h; sourceTree = "<group>"; };
+		3C79D8390D76F32E006A0B8D /* libfltk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfltk.a; path = /usr/local/lib/libfltk.a; sourceTree = "<absolute>"; };
+		3C79D84A0D76F39D006A0B8D /* uici.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uici.c; sourceTree = "<group>"; };
+		3C79D84B0D76F39D006A0B8D /* uiciname.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uiciname.c; sourceTree = "<group>"; };
+		3C79D88A0D76F65A006A0B8D /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = /usr/local/lib/libfftw3.a; sourceTree = "<absolute>"; };
+		3C79D88E0D76F70A006A0B8D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		3C79D88F0D76F70A006A0B8D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		3C79D8A60D771576006A0B8D /* XCALDAQRecordConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCALDAQRecordConstants.h; sourceTree = "<group>"; };
+		3CB799C40D86A82D000D8D88 /* XCALDAQCommands.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCALDAQCommands.h; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* xcaldaq_client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xcaldaq_client; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C79D83A0D76F32E006A0B8D /* libfltk.a in Frameworks */,
+				3C79D88B0D76F65A006A0B8D /* libfftw3.a in Frameworks */,
+				3C79D8900D76F70A006A0B8D /* Carbon.framework in Frameworks */,
+				3C79D8910D76F70A006A0B8D /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* xcaldaq_client */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = xcaldaq_client;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8160D76E7FF006A0B8D /* version.h */,
+				3C79D7F40D76E7FF006A0B8D /* byteorder64.h */,
+				3C79D7FD0D76E7FF006A0B8D /* endian.h */,
+				3C79D8170D76E7FF006A0B8D /* xcaldaq_client.cpp */,
+				3C79D8180D76E7FF006A0B8D /* xcaldaq_client.h */,
+				3C79D8360D76F2F6006A0B8D /* GUI */,
+				3C79D8400D76F35C006A0B8D /* Client */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* xcaldaq_client */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C79D8360D76F2F6006A0B8D /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8110D76E7FF006A0B8D /* SliderInput.h */,
+				3C79D7FA0D76E7FF006A0B8D /* ClientGUI.h */,
+				3C79D7F90D76E7FF006A0B8D /* ClientGUI.cpp */,
+				3C79DB3F0D788B6D006A0B8D /* data plotters */,
+				3C79D8380D76F30F006A0B8D /* GUI Frameworks */,
+				3C79D8370D76F303006A0B8D /* GUI Libraries */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		3C79D8370D76F303006A0B8D /* GUI Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8390D76F32E006A0B8D /* libfltk.a */,
+			);
+			name = "GUI Libraries";
+			sourceTree = "<group>";
+		};
+		3C79D8380D76F30F006A0B8D /* GUI Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D88E0D76F70A006A0B8D /* Carbon.framework */,
+				3C79D88F0D76F70A006A0B8D /* CoreFoundation.framework */,
+			);
+			name = "GUI Frameworks";
+			sourceTree = "<group>";
+		};
+		3C79D8400D76F35C006A0B8D /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D81B0D76E7FF006A0B8D /* XCALDAQLock.h */,
+				3C79D7F80D76E7FF006A0B8D /* Client.h */,
+				3C79D7F70D76E7FF006A0B8D /* Client.cpp */,
+				3C79D84F0D76F3B4006A0B8D /* Server Interface */,
+				3C79D85A0D76F4DA006A0B8D /* StreamChannel */,
+				3C79D85B0D76F52F006A0B8D /* XPulseRec */,
+				3C79D8500D76F3D9006A0B8D /* Data Writers */,
+				3C79D8590D76F4CE006A0B8D /* FFT */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		3C79D8410D76F36A006A0B8D /* DAQPipe */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D7FC0D76E7FF006A0B8D /* DAQPipe.h */,
+				3C79D7FB0D76E7FF006A0B8D /* DAQPipe.cpp */,
+				3C79D8140D76E7FF006A0B8D /* uici.h */,
+				3C79D84A0D76F39D006A0B8D /* uici.c */,
+				3C79D84B0D76F39D006A0B8D /* uiciname.c */,
+				3C79D8150D76E7FF006A0B8D /* uiciname.h */,
+			);
+			name = DAQPipe;
+			sourceTree = "<group>";
+		};
+		3C79D84F0D76F3B4006A0B8D /* Server Interface */ = {
+			isa = PBXGroup;
+			children = (
+				3CB799C40D86A82D000D8D88 /* XCALDAQCommands.h */,
+				3C79D81E0D76E7FF006A0B8D /* XCALDAQServer.h */,
+				3C79D81D0D76E7FF006A0B8D /* XCALDAQServer.cpp */,
+				3C79D8410D76F36A006A0B8D /* DAQPipe */,
+			);
+			name = "Server Interface";
+			sourceTree = "<group>";
+		};
+		3C79D8500D76F3D9006A0B8D /* Data Writers */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8210D76E7FF006A0B8D /* XOUT.h */,
+				3C79D8200D76E7FF006A0B8D /* XOUT.cpp */,
+				3C79D8010D76E7FF006A0B8D /* LANLOutput.h */,
+				3C79D8000D76E7FF006A0B8D /* LANLOutput.cpp */,
+				3C79D8030D76E7FF006A0B8D /* LJHOutput.h */,
+				3C79D8020D76E7FF006A0B8D /* LJHOutput.cpp */,
+				3C79D8090D76E7FF006A0B8D /* PLSOutput.h */,
+				3C79D8080D76E7FF006A0B8D /* PLSOutput.cpp */,
+				3C5469B00D7C5E0000CF4417 /* FFTOutput.h */,
+				3C5469B10D7C5E0000CF4417 /* FFTOutput.cpp */,
+			);
+			name = "Data Writers";
+			sourceTree = "<group>";
+		};
+		3C79D8590D76F4CE006A0B8D /* FFT */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D7FF0D76E7FF006A0B8D /* FFTChannel.h */,
+				3C79D7FE0D76E7FF006A0B8D /* FFTChannel.cpp */,
+				3C79D88A0D76F65A006A0B8D /* libfftw3.a */,
+			);
+			name = FFT;
+			sourceTree = "<group>";
+		};
+		3C79D85A0D76F4DA006A0B8D /* StreamChannel */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8130D76E7FF006A0B8D /* StreamChannel.h */,
+				3C79D8120D76E7FF006A0B8D /* StreamChannel.cpp */,
+				3C79D8A60D771576006A0B8D /* XCALDAQRecordConstants.h */,
+			);
+			name = StreamChannel;
+			sourceTree = "<group>";
+		};
+		3C79D85B0D76F52F006A0B8D /* XPulseRec */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8230D76E7FF006A0B8D /* XPulseRec.h */,
+				3C79D8220D76E7FF006A0B8D /* XPulseRec.cpp */,
+			);
+			name = XPulseRec;
+			sourceTree = "<group>";
+		};
+		3C79DB3F0D788B6D006A0B8D /* data plotters */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D80B0D76E7FF006A0B8D /* PRDisplay.h */,
+				3C79D80A0D76E7FF006A0B8D /* PRDisplay.cpp */,
+				3C79D80D0D76E7FF006A0B8D /* PulseAnalysisDisplay.h */,
+				3C79D80C0D76E7FF006A0B8D /* PulseAnalysisDisplay.cpp */,
+				3C79DB410D788BA9006A0B8D /* plot window */,
+			);
+			name = "data plotters";
+			sourceTree = "<group>";
+		};
+		3C79DB410D788BA9006A0B8D /* plot window */ = {
+			isa = PBXGroup;
+			children = (
+				3C79D8070D76E7FF006A0B8D /* plotWindow.h */,
+				3C79D8060D76E7FF006A0B8D /* plotWindow.cpp */,
+				3C79D7F60D76E7FF006A0B8D /* Cartesian.h */,
+				3C79D7F50D76E7FF006A0B8D /* Cartesian.cpp */,
+			);
+			name = "plot window";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* xcaldaq_client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "xcaldaq_client" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xcaldaq_client;
+			productInstallPath = "$(HOME)/bin";
+			productName = xcaldaq_client;
+			productReference = 8DD76F6C0486A84900D96B5E /* xcaldaq_client */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "xcaldaq_client" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* xcaldaq_client */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* xcaldaq_client */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C79D8240D76E7FF006A0B8D /* Cartesian.cpp in Sources */,
+				3C79D8250D76E7FF006A0B8D /* Client.cpp in Sources */,
+				3C79D8260D76E7FF006A0B8D /* ClientGUI.cpp in Sources */,
+				3C79D8270D76E7FF006A0B8D /* DAQPipe.cpp in Sources */,
+				3C79D8280D76E7FF006A0B8D /* FFTChannel.cpp in Sources */,
+				3C79D8290D76E7FF006A0B8D /* LANLOutput.cpp in Sources */,
+				3C79D82A0D76E7FF006A0B8D /* LJHOutput.cpp in Sources */,
+				3C79D82C0D76E7FF006A0B8D /* plotWindow.cpp in Sources */,
+				3C79D82D0D76E7FF006A0B8D /* PLSOutput.cpp in Sources */,
+				3C79D82E0D76E7FF006A0B8D /* PRDisplay.cpp in Sources */,
+				3C79D82F0D76E7FF006A0B8D /* PulseAnalysisDisplay.cpp in Sources */,
+				3C79D8310D76E7FF006A0B8D /* StreamChannel.cpp in Sources */,
+				3C79D8320D76E7FF006A0B8D /* xcaldaq_client.cpp in Sources */,
+				3C79D8330D76E7FF006A0B8D /* XCALDAQServer.cpp in Sources */,
+				3C79D8340D76E7FF006A0B8D /* XOUT.cpp in Sources */,
+				3C79D8350D76E7FF006A0B8D /* XPulseRec.cpp in Sources */,
+				3C79D84C0D76F39D006A0B8D /* uici.c in Sources */,
+				3C79D84D0D76F39D006A0B8D /* uiciname.c in Sources */,
+				3C5469B20D7C5E0000CF4417 /* FFTOutput.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = xcaldaq_client;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = xcaldaq_client;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/include,
+					/sw/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/lib,
+					/sw/lib,
+				);
+				PREBINDING = NO;
+				VALID_ARCHS = i386;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "xcaldaq_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "xcaldaq_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

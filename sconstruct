@@ -1,0 +1,109 @@
+
+
+## if you do scons debug=1 you'll get a debug build
+build_debug=ARGUMENTS.get('debug')
+
+### force debug to be true always for now
+#build_debug=1
+
+
+
+
+target_bin='xcaldaq_client'
+
+### get the slocal variable from the environment
+import os
+if os.environ.has_key("SLOCAL"):
+    slocal=os.environ["SLOCAL"]
+else:
+    slocal="./build"
+
+
+## setup my local library additions
+local_libs=slocal + '/lib'
+local_include=slocal + '/include'
+
+
+install_dir=slocal + '/bin'
+
+
+cc='gcc'
+ccflags=''
+ccflags+=' -Wall'
+ccflags+=' -D_FILE_OFFSET_BITS=64'
+
+
+if build_debug:
+    ccflags +=" -g2"
+else:
+    #ccflags += " -O"
+    ccflags += " -O2"
+
+lib_path=list()
+lib_path.append(local_libs)
+
+cpp_path=list()
+cpp_path.append(local_include)
+
+
+
+libs=list()
+libs.append('pthread')
+libs.append('fltk')
+#libs.append('fltk_gl')
+libs.append('m')
+libs.append('dl')
+libs.append('fftw3')
+
+import sys
+if (sys.platform != 'darwin'): 
+    libs.append('X11')
+    libs.append('GL')
+    libs.append('Xext')    
+
+if (sys.platform == 'darwin'): 
+
+    ### for fink libraries (usually /sw)
+    fink_root='/sw'
+    lib_path.append(os.path.join(fink_root,'lib'))
+    cpp_path.append(os.path.join(fink_root,'include'))
+    lib_path.append(os.path.join(fink_root,'/lib/fltk-aqua/lib'))
+
+    ### for macports libraries (usually /opt/local)
+    macports_root='/opt/local'                
+    lib_path.append(os.path.join(macports_root,'lib'))
+    cpp_path.append(os.path.join(macports_root,'include'))
+
+
+
+
+
+#### all files in directory
+import glob
+cxx_files =glob.glob('*.c')
+cxx_files +=glob.glob('*.cc')
+cxx_files +=glob.glob('*.cpp')
+cxx_files +=glob.glob('*.cxx')
+cxx_files +=glob.glob('*.C')
+
+
+env = Environment(CC = cc,CCFLAGS = ccflags)
+
+#### I needed to add all the cocoa/carbon frameworks
+import sys
+if sys.platform == 'darwin': 
+     env.Append(FRAMEWORKS="Carbon")
+     env.Append(FRAMEWORKS="Cocoa")
+     env.Append(FRAMEWORKS="ApplicationServices")
+     libs +="z"
+#Carbon -framework Cocoa -framework ApplicationServices -lz
+## setup the install rule
+env.Alias(target="install", 
+          source=env.Install(dir=install_dir, source=target_bin))
+
+     
+
+env.Program(target=target_bin,
+    source=cxx_files,
+    LIBS=libs,    
+    CPPPATH=cpp_path,LIBPATH=lib_path)
