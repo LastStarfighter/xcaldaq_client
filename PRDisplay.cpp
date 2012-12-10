@@ -16,6 +16,8 @@ PRDisplay::PRDisplay (xdaq::Client* c)
     // setup the window
     setup();
 
+//THIS COMMENT BLOCK OF COURSE NEEDS TO BE UNCOMMENTED
+/*
     // char buffer
     char buf[256];
 
@@ -171,6 +173,7 @@ PRDisplay::PRDisplay (xdaq::Client* c)
 
     // hide the window
     window->hide();
+    */
 }
 
 

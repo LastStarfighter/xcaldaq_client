@@ -224,9 +224,11 @@ void ClientGUI::plotWindow_removeAll ()
     // get the plotter window lock
     plotterWindowsLock.getLock();
 
+    // Basically a pointer that can iterate over the range of windows
     std::deque<PRDisplay*>::iterator prd = plotterWindows.begin();
     for (unsigned int i=0; i<plotterWindows.size(); i++)
     {
+	//Stop the window
         (*prd)->stop();
         prd++;
     }
@@ -237,6 +239,30 @@ void ClientGUI::plotWindow_removeAll ()
 
 }
 
+////////////////////////////////////////////////////////////////////////////////
+void ClientGUI::plotWindow_image ()
+{
+
+    ImageWindow *image = new ImageWindow();
+
+	//ImageWindow image;
+
+    // get the plotter window lock
+    plotterWindowsLock.getLock();
+
+    // position the new plotter
+    //image->position(mainWindow->x()+15,mainWindow->y()+mainWindow->h()+15);
+    //image->show();
+
+    // try to get the main window to focus
+    mainWindow->show();
+    mainWindow->take_focus();
+    mainWindow->show();
+
+    // release the plotter window lock
+    plotterWindowsLock.releaseLock();
+
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 void ClientGUI::connect (bool b)
@@ -457,8 +483,11 @@ void ClientGUI::mainWindow_setup ()
     int y0, y1, y2, y3;
 
     // yGroupSize
+    //The main window is composed of 3 horizontal panels.
+    //The [0] element controls the height of the top pane in panel 1 and 3
+    //The [1] element controls the height of the top pane in panel 2
     yGroupSize[0] = (bigy - 3*ybuffer)/2;         // half the height
-    yGroupSize[1] = bigy - 2*ybuffer;             // the full height
+    yGroupSize[1] = (bigy - 2*ybuffer);             // the full height
 
     //    yGroupSize[0] = yGroupSize[0]-menu_height;         // half the height
     // yGroupSize[1] = yGroupSize[1]-menu_height;             // the full height
@@ -498,7 +527,10 @@ void ClientGUI::mainWindow_setup ()
         int menu_width=bigx;
 
         build_menu(menu_width, menu_height);
-
+        
+        
+	//This stuff is all for the top leftmost panel (Server connection settings)
+	
         {                                         // server group
             serverGroup = new Fl_Group (X0,Y0,xGroupSize[0],yGroupSize[0]);
             serverGroup->box(FL_BORDER_BOX);
@@ -542,6 +574,7 @@ void ClientGUI::mainWindow_setup ()
             w->align(FL_ALIGN_TOP);
             w->callback((Fl_Callback*) mainWindow_handleEvent, (void*) this);
 
+
                                                   // buffer level
             w = bufferLevelIndicator = new Fl_Progress (x3,y0,xsize[3],ysize[1],"Buffer Level");
             bufferLevelIndicator->minimum(0.);
@@ -563,7 +596,7 @@ void ClientGUI::mainWindow_setup ()
             serverGroup->end();
         }
 
-        // the file writer
+        // GUI elements for the file writer
         {
             int ybuffer = 3;
             int xbuffer = 5;
@@ -646,7 +679,7 @@ void ClientGUI::mainWindow_setup ()
             fileGroup->deactivate();
         }
 
-        // commanding buttons
+        // Top right panel - commanding buttons
         {
             y[0] = Y0 + ybuffer;
             y[1] = y[0] + ysize[0] + ybuffer;
@@ -671,7 +704,7 @@ void ClientGUI::mainWindow_setup ()
             commandGroup->end();
         }
 
-        // stream, record length and threshold
+        // Middle panel. stream, record length and threshold
         {
             streamGroup = new Fl_Group (X1,Y0,xGroupSize[1],yGroupSize[1]);
             int xsize[3];
@@ -795,7 +828,7 @@ void ClientGUI::mainWindow_setup ()
             streamGroup->deactivate();
         }
 
-        {                                         // plot window controller buttons
+        { // Bottom right panel - plot window controller buttons
             plotGroup = new Fl_Group (X2,Y1,xGroupSize[2],yGroupSize[0]);
 
             plotGroup->box(FL_BORDER_BOX);
@@ -805,19 +838,24 @@ void ClientGUI::mainWindow_setup ()
 
             x0 = plotGroup->x() + xbuffer;        // plot
 
-            y0 = plotGroup->y() + ybuffer;        // button1
+            y0 = plotGroup->y() + ybuffer;        // button0
             y1 = y0 + ysize[0] + ybuffer;         // button1
+            y2 = y1 + ysize[0] + ybuffer;	  // button2
 
                                                   // plotButton
             w = morePlotsButton = new Fl_Button (x0,y0,xsize[0],ysize[0],"Open Another Plot Window");
             w->callback((Fl_Callback*) mainWindow_handleEvent, (void*) this);
 
-                                                  // plotButton
+                                                  // Close all plots Button
             w = removeAllPlotWindowButton = new Fl_Button (x0,y1,xsize[0],ysize[0],"Close All Plot Windows");
             w->callback((Fl_Callback*) mainWindow_handleEvent, (void*) this);
 
+                                                  // Open imaging window
+            w = imageWindowButton = new Fl_Button (x0,y2,xsize[0],ysize[0],"Open an Image Window");
+            w->callback((Fl_Callback*) mainWindow_handleEvent, (void*) this);
+            
             plotGroup->end();
-            plotGroup->deactivate();
+            //plotGroup->deactivate();
 
         }
 
@@ -1261,6 +1299,10 @@ void ClientGUI::mainWindow_handleEvent(Fl_Widget *w)
             return;
         }
 
+
+    }
+    
+        //THIS STUFF SHOULD BE ABOVE THE BRACKET IMMEDIATELY PRIOR TO THIS
         // plot group widgets
         if (w==morePlotsButton)
         {
@@ -1274,9 +1316,13 @@ void ClientGUI::mainWindow_handleEvent(Fl_Widget *w)
             return;
         }
 
-    }
-
-    std::cout << "Main Window received an even that it doesn't know how to handle?" << std::endl;
+        if (w==imageWindowButton)
+        {
+            plotWindow_image();
+            return;
+        }
+        
+    std::cout << "Main Window received an event that it doesn't know how to handle?" << std::endl;
 }
 
 

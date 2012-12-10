@@ -12,8 +12,7 @@ LIBS = -lpthread -lfltk -lfltk_gl -lX11 -lGL -lm -lXext -ldl -lfftw3
 
 LINKER = -Wl,-rpath /usr/local/lib
 
-
-OBJS = XCALDAQServer.o DAQPipe.o PLSOutput.o StreamChannel.o Client.o xcaldaq_client.o ClientGUI.o XOUT.o FFTChannel.o plotWindow.o XPulseRec.o LJHOutput.o PRDisplay.o Cartesian.o PulseAnalysisDisplay.o LANLOutput.o FFTOutput.o gsd_error.o misc_utils.o string_utils.o  client_trigger_state.o client_gui_menus.o client_mixing_state.o
+OBJS = XCALDAQServer.o DAQPipe.o PLSOutput.o StreamChannel.o Client.o xcaldaq_client.o ClientGUI.o XOUT.o FFTChannel.o plotWindow.o XPulseRec.o LJHOutput.o PRDisplay.o Cartesian.o PulseAnalysisDisplay.o LANLOutput.o FFTOutput.o gsd_error.o misc_utils.o string_utils.o  client_trigger_state.o client_gui_menus.o client_mixing_state.o ImageWindow.o
  
 COBJS = uici.o uiciname.o 
 

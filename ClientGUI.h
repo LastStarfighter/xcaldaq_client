@@ -32,6 +32,8 @@
 #include "plotWindow.h"
 #include "PRDisplay.h"
 #include "PulseAnalysisDisplay.h"
+#include "ImageWindow.h"
+
 
 // local marcos
 #define TIME_BETWEEN_EVENT_LOOP .2
@@ -61,6 +63,7 @@ class ClientGUI
         //private functions
         void plotWindow_add ();
         void plotWindow_removeAll ();
+        void plotWindow_image ();
 
         void connect (bool b);                    // gets the GUI ready for a connected client
         void stream  (bool b);                    // gets the GUI ready for a client that is receiving streaming data
@@ -201,6 +204,7 @@ class ClientGUI
         Fl_Group *plotGroup;
         Fl_Button* morePlotsButton;
         Fl_Button* removeAllPlotWindowButton;
+        Fl_Button* imageWindowButton;
 
         /* TRIGGER RATE WIDGETS */
         Fl_Double_Window *triggerRateWindow;
